@@ -39,6 +39,10 @@ header h1 {
     margin-right: auto;
 }
 
+/*----------------
+    HEADER
+------------------*/
+
 header{
     height: 150px;
     background-image: url(../img/wall.png);
@@ -46,10 +50,16 @@ header{
     
 }
 
+/*----------------
+    MAIN
+------------------*/
+
 main{
     background-image: url(../img/cork.png);
-    height: 100vh;
+    height: 100%;
     padding: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .card{

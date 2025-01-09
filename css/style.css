@@ -81,10 +81,16 @@ main{
     margin: 25px;
 }
 
+.card:hover {
+    transition: all 0.5s ease;
+    transform: rotate(-10deg);
+}
+
 .nailPic{
     position: absolute;
-    top: -15px;
-    left: 135px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 

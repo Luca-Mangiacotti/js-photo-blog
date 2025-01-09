@@ -24,7 +24,7 @@ body{
 }
 
 header h1 {
-    font-size: 90px;
+    font-size: 70px;
     padding: 30px;
 }
 
@@ -58,13 +58,20 @@ main{
     background-image: url(../img/cork.png);
     height: 100%;
     padding: 25px;
+}
+
+#blogPics{
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+
 }
 
 .card{
-    height: 350px;
     width: 300px;
+    height: 350px;
     padding: 20px;
     background-color: #ffff;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -76,4 +83,34 @@ main{
     position: absolute;
     top: -15px;
     left: 135px;
+}
+
+
+/*----------------
+    RESPONSIVE
+------------------*/
+
+
+/* Viewport "TABLET" da 768px a infinito */
+@media screen and (min-width: 768px) {
+
+    .card{
+       max-width: calc((100% - 25px * 4) / 2);
+    }    
+
+    header h1 {
+        font-size: 90px;
+    }
+
+
+
+}
+
+/* Viewport "DESKTOP" da 1440px a infinito */
+@media screen and (min-width: 1440px) {
+
+    .card{
+       max-width: calc((100% - 25px * 6) / 3);
+    }    
+
 }

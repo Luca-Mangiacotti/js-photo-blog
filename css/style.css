@@ -68,7 +68,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-
+    margin-top: 25px;
 }
 
 .card{
@@ -91,6 +91,10 @@ main{
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.card p {
+    padding: 10px;
 }
 
 

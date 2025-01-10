@@ -3,7 +3,6 @@
 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 .then((addCard) => {
 
-    console.log(addCard.data)
     const cardData = addCard.data
     console.log(cardData)
 
@@ -15,6 +14,16 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                                   <div class="nailPic"><img src="./img/pin.svg" alt="chiodino"></div>
                               </div>`
     }
+
+    const cards = document.querySelectorAll(".card")
+
+    cards.forEach((card) => {
+        card.addEventListener("click", ()=>{
+            shadowElm.classList.toggle("shadow");
+        })
+    })
+
+
     
     //test
     // addCard.forEach(cardElm => {
@@ -33,7 +42,13 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 //DOM ELEMENTS
 
 const blogElm = document.getElementById("blogPics")
-
+const btnShadElm = document.querySelector(".btnShad")
+const shadowElm = document.getElementById("overShade")
 
 //EVENTS
 
+
+
+btnShadElm.addEventListener("click", () =>{
+    shadowElm.classList.toggle("shadow");
+})

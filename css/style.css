@@ -114,20 +114,34 @@ main{
    
 }
 
-.imgShad{
+#imgShad{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.btnShad{
+.btnShad {
     
     position: absolute;
-    top: 20%;
+    top: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    font-weight: 900;
+    background-color: #8b261d;
+    color: bisque;
+    border: 0px;
+    padding: 5px;
+    border-radius: 20px;
 }
+
+.btnShad:hover {
+    background-color: #d15044;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
 
 
 /*----------------

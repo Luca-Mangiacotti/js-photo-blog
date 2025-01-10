@@ -4,10 +4,9 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 .then((addCard) => {
 
     const cardData = addCard.data
-    console.log(cardData)
+    // console.log(cardData)
 
     for(let i = 0; i < cardData.length; i++ ){
-        console.log(cardData[i])
         blogElm.innerHTML += `<div class="card">
                                   <img class="img-fluid" src="${cardData[i].url}" alt="imgcard">
                                   <p>${cardData[i].title}</p>
@@ -16,10 +15,18 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
     }
 
     const cards = document.querySelectorAll(".card")
+    
+
 
     cards.forEach((card) => {
         card.addEventListener("click", ()=>{
-            shadowElm.classList.toggle("shadow");
+            
+            shadowElm.classList.toggle("shadow")
+            const currentImg = card.querySelector("img").src
+            console.log(toggleImg)
+            toggleImg.innerHTML = `<img class="img-fluid" src="${currentImg}" alt="${currentImg}"></img>`
+            console.log( currentImg)
+
         })
     })
 
@@ -44,6 +51,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 const blogElm = document.getElementById("blogPics")
 const btnShadElm = document.querySelector(".btnShad")
 const shadowElm = document.getElementById("overShade")
+const toggleImg = document.getElementById("imgShad")
 
 //EVENTS
 

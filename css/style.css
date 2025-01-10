@@ -98,6 +98,10 @@ main{
     padding: 10px;
 }
 
+/*----------------
+    STILE PER OVERLAY
+------------------*/
+
 #overShade{
     position: fixed;
     left: 0;
